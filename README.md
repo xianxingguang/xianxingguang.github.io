@@ -1,37 +1,89 @@
-## Welcome to GitHub Pages
+<p align="center" class="has-mb-6">
+<img height="90" src="https://kaiiiz.github.io/hexo-theme-book-demo/images/logo.png">
+<br>A simple, elegant, book-like hexo theme with some useful features.
+<br>
+</p>
 
-You can use the [editor on GitHub](https://github.com/xianxingguang/xianxingguang.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+![book-preview](https://kaiiiz.github.io/hexo-theme-book-demo/images/header.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## ⚠ Notice
 
-### Markdown
+Since I have already migrated my note from hexo to [hugo](https://gohugo.io/), the development progress may be slow down in the future. If you want to add more features to this theme, fill free to fork and modify it by yourself. Though I will not put a lot efforts in this project, any suggestions are still welcome.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+However, I suggest that you should try hugo first before using hexo (if you never used both). Hugo is writen by go-lang, and it is faster, powerful and lighter than hexo in my opinion. After doing some research, I realized that hugo can meet all of my requirements and also provide a more logical way to customize a theme at the same time which is amazing, you guys should give it a try!
 
-```markdown
-Syntax highlighted code block
+## 💿 Installation
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+git clone https://github.com/kaiiiz/hexo-theme-book.git themes/book
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+If you don't have scss renderer, follow this:
 
-### Jekyll Themes
+```
+npm install hexo-renderer-scss --save
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xianxingguang/xianxingguang.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Modify `theme` entry in `_config.yml`
 
-### Support or Contact
+```
+theme: book
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Change markdown renderer
+
+For better render quality, I suggest that you should change the default renderer.
+
+The detail, see [change markdown renderer](https://github.com/kaiiiz/hexo-theme-book/wiki/Change-markdown-renderer)
+
+## 🎈 Update
+
+Jump into the theme folder, run `git pull`. If you use `/source/_data/book.yml`, please note the diffrence of updated `_config.yml`.
+
+### Smooth Update
+
+For smoothly updating, I recommand to create a config file named `book.yml` in `/source/_data` folder (If it doesn't exist, create one)
+
+> **Notice: source folder is under your hexo working directory, not the theme one!**
+
+Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it will replace the contents of config in `/themes/book/_config.yml`. Now you can configure it independently and also, you can update theme more smoothly.
+
+## ⚒ Configurations
+
+The detail of config, see [Configurations](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)
+
+## 🎁 Features
+
+**External Library Integration:**
+
+Comments system:
+
+* [utterances](https://github.com/utterance/utterances)
+* [disqus](https://disqus.com/)
+* [gitalk](https://github.com/gitalk/gitalk)
+
+Others:
+
+* [zooming](https://github.com/kingdido999/zooming)
+* [google analytics](https://analytics.google.com/)
+
+**Code Syntax Highlight:**
+
+Using the built-in systax highlight system ([highlight.js](https://highlightjs.org/)) supported from hexo itself, so no other configuration is needed.
+
+However, there are multiple themes integrated from [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme). You can change the theme in `_config.yml`.
+
+| Normal | Night | Night Eighties | Night Blue | Night Bright
+| --- | --- | --- | --- | --- | 
+| ![](https://github.com/ChrisKempson/Tomorrow-Theme/raw/master/Images/Tomorrow.png) | ![](https://github.com/ChrisKempson/Tomorrow-Theme/raw/master/Images/Tomorrow-Night.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Eighties.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Blue.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Bright.png)
+
+**Powerful and Fully-Customized Sidebar Menu:**
+
+Checkout [Menu Realtime Demo](https://kaiiiz.github.io/hexo-theme-book-demo/demo/menu-realtime/)
+
+**Responsive Layout:**
+
+Book will adapt to different viewpoints in order to give you the best reading experience.
+
+![](https://kaiiiz.github.io/hexo-theme-book-demo/images/responsive.png)
+
